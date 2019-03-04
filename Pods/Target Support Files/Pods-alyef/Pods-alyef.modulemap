@@ -1,0 +1,6 @@
+framework module Pods_alyef {
+  umbrella header "Pods-alyef-umbrella.h"
+
+  export *
+  module * { export * }
+}
