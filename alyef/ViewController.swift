@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var last:String = "te"
      var last_string:String = "check this out"
     var tjisForSandal = "yes we did it"
+     var awad_branch:String = "this is from sandal branch"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
