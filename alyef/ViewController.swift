@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var last:String = "te"
+     var last_string:String = "check this out"
     var tjisForSandal = "yes we did it"
     override func viewDidLoad() {
         super.viewDidLoad()
