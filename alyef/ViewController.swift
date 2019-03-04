@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var last:String = "te"
+    var tjisForSandal = "yes we did it"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
