@@ -18,6 +18,7 @@
 		D1C46436222FA90E00ABEF1A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C46434222FA90E00ABEF1A /* API.swift */; };
 		D1C4643B222FB5AA00ABEF1A /* Advertise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4643A222FB5AA00ABEF1A /* Advertise.swift */; };
 		D1C4643D222FBEC500ABEF1A /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4643C222FBEC500ABEF1A /* GlobalVariables.swift */; };
+		D1C46440222FC0B400ABEF1A /* Mintainans_Servise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4643F222FC0B400ABEF1A /* Mintainans_Servise.swift */; };
 		D1CB961A222D66620046C0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB9619222D66620046C0C9 /* AppDelegate.swift */; };
 		D1CB961C222D66620046C0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB961B222D66620046C0C9 /* ViewController.swift */; };
 		D1CB961F222D66620046C0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CB961D222D66620046C0C9 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		D1C46434222FA90E00ABEF1A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D1C4643A222FB5AA00ABEF1A /* Advertise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertise.swift; sourceTree = "<group>"; };
 		D1C4643C222FBEC500ABEF1A /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		D1C4643F222FC0B400ABEF1A /* Mintainans_Servise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mintainans_Servise.swift; sourceTree = "<group>"; };
 		D1CB9616222D66620046C0C9 /* alyef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alyef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CB9619222D66620046C0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CB961B222D66620046C0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = Splash_Advertise;
 			sourceTree = "<group>";
 		};
+		D1C4643E222FC01200ABEF1A /* Mintainans_Servise */ = {
+			isa = PBXGroup;
+			children = (
+				D1C4643F222FC0B400ABEF1A /* Mintainans_Servise.swift */,
+			);
+			path = Mintainans_Servise;
+			sourceTree = "<group>";
+		};
 		D1CB960D222D66620046C0C9 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				D1CB9619222D66620046C0C9 /* AppDelegate.swift */,
 				D1CB961B222D66620046C0C9 /* ViewController.swift */,
 				D1CB9623222D66660046C0C9 /* Assets.xcassets */,
+				D1C4643E222FC01200ABEF1A /* Mintainans_Servise */,
 				D1C46439222FB57100ABEF1A /* Splash_Advertise */,
 				D1C46430222FA8A800ABEF1A /* Fonts */,
 				D1C46425222FA87000ABEF1A /* Models */,
@@ -287,6 +298,7 @@
 				D1C4641C222FA34E00ABEF1A /* Splash.swift in Sources */,
 				D1C4642F222FA88400ABEF1A /* SysJsonData.swift in Sources */,
 				D1C4642E222FA88400ABEF1A /* RemoveKeyboard.swift in Sources */,
+				D1C46440222FC0B400ABEF1A /* Mintainans_Servise.swift in Sources */,
 				D1CB961A222D66620046C0C9 /* AppDelegate.swift in Sources */,
 				D1C4643B222FB5AA00ABEF1A /* Advertise.swift in Sources */,
 			);
