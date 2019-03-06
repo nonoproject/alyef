@@ -11,18 +11,18 @@ import UIKit
 class connection:NSData
 {
     
-    let Base_Url:String = "http://medhyafapp.com/ref/app/"
+    let Base_Url:String = "https://medhyafapp.com/ref/app/"
     func getUrl(word:String) -> String{
         var Slim_word:String=""
         switch word {
         case "getAddvertiseImage":
-            Slim_word="http://medhyafapp.com/ref/app/show/ads.php"
+            Slim_word="https://medhyafapp.com/ref/app/show/ads.php"
             break
         case "getAddvertiseImageLink":
-            Slim_word="http://medhyafapp.com/ref/uploads/"
+            Slim_word="https://medhyafapp.com/ref/uploads/"
             break
         case "getPhone":
-            Slim_word="medhyaf/app/show/org.php"
+            Slim_word="http://medhyafapp.com/ref/app/show/org.php"
             break
         default: break
             /*

@@ -24,7 +24,10 @@ class Splash: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            sleep(3)
+            sleep(1)
+            
+            
+            self.performSegue(withIdentifier: "toAdvertise", sender: nil)
             //deleteAllRecords()
         
             // Do any additional setup after loading the view.
