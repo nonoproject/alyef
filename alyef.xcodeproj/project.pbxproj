@@ -48,6 +48,7 @@
 		D1CB9623222D66660046C0C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1CB9626222D66660046C0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1CB9628222D66660046C0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1D4BCD8222FCACB007D2FD6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EB119D88D6A5053C29A7BEDA /* Pods_alyef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alyef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC77E54E92267F901287742 /* Pods-alyef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alyef.release.xcconfig"; path = "Pods/Target Support Files/Pods-alyef/Pods-alyef.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C4643F222FC0B400ABEF1A /* Mintainans_Servise.swift */,
+				D1D4BCD8222FCACB007D2FD6 /* Service.swift */,
 			);
 			path = Mintainans_Servise;
 			sourceTree = "<group>";
@@ -289,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C46436222FA90E00ABEF1A /* API.swift in Sources */,
+				D1D4BCD9222FCACB007D2FD6 /* Service.swift in Sources */,
 				D1C4642D222FA88400ABEF1A /* CheckInternet.swift in Sources */,
 				D1CB961C222D66620046C0C9 /* ViewController.swift in Sources */,
 				D1C4642C222FA88400ABEF1A /* SysConnection.swift in Sources */,

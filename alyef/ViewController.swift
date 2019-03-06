@@ -9,15 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var last:String = "te"
-     var last_string:String = "check this out"
-    var tjisForSandal = "yes we did it"
-     var awad_branch:String = "this is from sandal branch"
+    
+    @IBOutlet weak var adertise_Service: DesignableButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    @IBAction func Advertise_but(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "toServise", sender: nil)
+    }
+    
 }
 

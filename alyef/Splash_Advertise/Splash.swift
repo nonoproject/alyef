@@ -27,7 +27,7 @@ class Splash: UIViewController {
             sleep(1)
             
             
-            self.performSegue(withIdentifier: "toAdvertise", sender: nil)
+            self.performSegue(withIdentifier: "toAdvetise", sender: nil)
             //deleteAllRecords()
         
             // Do any additional setup after loading the view.
