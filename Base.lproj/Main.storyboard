@@ -312,14 +312,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="air" width="170" height="170"/>
-        <image name="back" width="111" height="74"/>
-        <image name="btn1" width="166" height="32"/>
-        <image name="check" width="256" height="256"/>
-        <image name="dek" width="185" height="185"/>
-        <image name="fix" width="170" height="170"/>
-        <image name="icon" width="341" height="341"/>
-        <image name="sale" width="83" height="83"/>
-        <image name="text" width="280" height="75"/>
+        <image name="air" width="364" height="364"/>
+        <image name="back" width="333" height="222"/>
+        <image name="btn1" width="500" height="98"/>
+        <image name="check" width="768" height="768"/>
+        <image name="dek" width="555" height="555"/>
+        <image name="fix" width="491.51998901367188" height="491.51998901367188"/>
+        <image name="icon" width="1024" height="1024"/>
+        <image name="sale" width="250" height="250"/>
+        <image name="text" width="840" height="225"/>
     </resources>
 </document>
