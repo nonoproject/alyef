@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Splash-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Splash" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,17 +34,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cch-Be-Juf"/>
                     <connections>
-                        <segue destination="PFv-ad-2Wz" kind="push" id="6MN-tg-v8h"/>
+                        <segue destination="PFv-ad-2Wz" kind="push" identifier="toAdvetise" id="6MN-tg-v8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="149"/>
+            <point key="canvasLocation" x="1021.6" y="148.87556221889056"/>
         </scene>
-        <!--View Controller-->
+        <!--Advertise-->
         <scene sceneID="tHS-7g-K0s">
             <objects>
-                <viewController id="PFv-ad-2Wz" sceneMemberID="viewController">
+                <viewController id="PFv-ad-2Wz" customClass="Advertise" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="790-Zl-wox">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +82,9 @@
                                         <state key="normal" title="إستمر" backgroundImage="btn1">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="toMenuAction:" destination="PFv-ad-2Wz" eventType="touchUpInside" id="TaK-JU-vk9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,7 +111,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZeO-aE-4eO"/>
                     <connections>
-                        <segue destination="Myp-sm-wGf" kind="push" id="Eim-Lq-Auq"/>
+                        <outlet property="AdvertiseImage" destination="EqN-Tf-l5I" id="z0L-4c-YoE"/>
+                        <outlet property="advertise_message" destination="ydb-2n-PTt" id="PQf-VW-VRc"/>
+                        <segue destination="Myp-sm-wGf" kind="push" identifier="toMenu" id="Eim-Lq-Auq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EK-sy-qb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,7 +123,7 @@
         <!--View Controller-->
         <scene sceneID="4OM-9p-dnl">
             <objects>
-                <viewController id="Myp-sm-wGf" sceneMemberID="viewController">
+                <viewController id="Myp-sm-wGf" customClass="ViewController" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R5z-al-8le">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +147,9 @@
                                         <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Advertise_but:" destination="Myp-sm-wGf" eventType="touchUpInside" id="jbN-5P-HmN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zNH-br-LkP" customClass="DesignableButton" customModule="alyef" customModuleProvider="target">
                                 <rect key="frame" x="137" y="229" width="100" height="100"/>
@@ -190,15 +198,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="mW0-Ih-ukB"/>
+                    <connections>
+                        <outlet property="adertise_Service" destination="6jH-9j-2iz" id="mlS-NR-Mur"/>
+                        <segue destination="YUu-hY-aNh" kind="push" identifier="toServise" id="pPW-1B-94N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHu-pL-pDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2396" y="148.87556221889056"/>
         </scene>
-        <!--View Controller-->
+        <!--Service-->
         <scene sceneID="S5u-vY-kRU">
             <objects>
-                <viewController id="YUu-hY-aNh" sceneMemberID="viewController">
+                <viewController id="YUu-hY-aNh" customClass="Service" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPt-gE-J7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,6 +219,9 @@
                                 <rect key="frame" x="330" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="back_button:" destination="YUu-hY-aNh" eventType="touchUpInside" id="wFg-w4-ms2"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ecY-P9-b0r">
                                 <rect key="frame" x="16" y="99" width="343" height="128"/>
@@ -241,7 +256,7 @@
                                                     <rect key="frame" x="10" y="10" width="282" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
-                                                    <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289305999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -272,10 +287,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xT6-At-2mY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeF-0n-r0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3111" y="149"/>
+            <point key="canvasLocation" x="3133.5999999999999" y="148.87556221889056"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kjk-bH-kst">
@@ -292,18 +308,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCZ-aR-p81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="149"/>
+            <point key="canvasLocation" x="270" y="149"/>
         </scene>
     </scenes>
     <resources>
-        <image name="air" width="364" height="364"/>
-        <image name="back" width="333" height="222"/>
-        <image name="btn1" width="500" height="98"/>
-        <image name="check" width="768" height="768"/>
-        <image name="dek" width="555" height="555"/>
-        <image name="fix" width="491.51998901367188" height="491.51998901367188"/>
-        <image name="icon" width="1024" height="1024"/>
-        <image name="sale" width="250" height="250"/>
-        <image name="text" width="840" height="225"/>
+        <image name="air" width="170" height="170"/>
+        <image name="back" width="111" height="74"/>
+        <image name="btn1" width="166" height="32"/>
+        <image name="check" width="256" height="256"/>
+        <image name="dek" width="185" height="185"/>
+        <image name="fix" width="170" height="170"/>
+        <image name="icon" width="341" height="341"/>
+        <image name="sale" width="83" height="83"/>
+        <image name="text" width="280" height="75"/>
     </resources>
 </document>
