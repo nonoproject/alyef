@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B28228E7CA8C7CCA8AE6DE61 /* Pods_alyef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB119D88D6A5053C29A7BEDA /* Pods_alyef.framework */; };
+		D1A69BBE222FDC1B00365E35 /* ServiseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A69BBD222FDC1B00365E35 /* ServiseCell.swift */; };
 		D1C4641C222FA34E00ABEF1A /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4641B222FA34E00ABEF1A /* Splash.swift */; };
 		D1C4642B222FA88400ABEF1A /* Extes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C46426222FA88400ABEF1A /* Extes.swift */; };
 		D1C4642C222FA88400ABEF1A /* SysConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C46427222FA88400ABEF1A /* SysConnection.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		32AB4B44D3CC97E0F754BE42 /* Pods-alyef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alyef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alyef/Pods-alyef.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A69BBD222FDC1B00365E35 /* ServiseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiseCell.swift; sourceTree = "<group>"; };
 		D1C4641B222FA34E00ABEF1A /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		D1C46426222FA88400ABEF1A /* Extes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extes.swift; sourceTree = "<group>"; };
 		D1C46427222FA88400ABEF1A /* SysConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysConnection.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				D1C4643F222FC0B400ABEF1A /* Mintainans_Servise.swift */,
 				D1D4BCD8222FCACB007D2FD6 /* Service.swift */,
+				D1A69BBD222FDC1B00365E35 /* ServiseCell.swift */,
 			);
 			path = Mintainans_Servise;
 			sourceTree = "<group>";
@@ -291,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C46436222FA90E00ABEF1A /* API.swift in Sources */,
-				D1D4BCD9222FCACB007D2FD6 /* Service.swift in Sources */,
+				D1A69BBE222FDC1B00365E35 /* ServiseCell.swift in Sources */,
 				D1C4642D222FA88400ABEF1A /* CheckInternet.swift in Sources */,
 				D1CB961C222D66620046C0C9 /* ViewController.swift in Sources */,
 				D1C4642C222FA88400ABEF1A /* SysConnection.swift in Sources */,
