@@ -16,16 +16,21 @@ class connection:NSData
         var Slim_word:String=""
         switch word {
         case "getAddvertiseImage":
-            Slim_word="medhyaf/app/show/ads.php"
+            Slim_word="http://medhyafapp.com/ref/app/show/ads.php"
             break
         case "getAddvertiseImageLink":
-            Slim_word="medhyaf/uploads/"
+            Slim_word="http://medhyafapp.com/ref/uploads/"
             break
         case "getPhone":
             Slim_word="medhyaf/app/show/org.php"
             break
         default: break
-            
+            /*
+             http://medhyafapp.com/ref/app/
+             http://medhyafapp.com/ref/app/show
+             http://medhyafapp.com/ref/app/write
+             http://medhyafapp.com/ref/uploads/
+             */
         }
         return Base_Url+Slim_word
     }
