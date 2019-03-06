@@ -40,8 +40,28 @@
             </objects>
             <point key="canvasLocation" x="82.400000000000006" y="148.87556221889056"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="tHS-7g-K0s">
+            <objects>
+                <viewController id="PFv-ad-2Wz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="790-Zl-wox">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" id="EqN-Tf-l5I">
+                                <rect key="frame" x="67" y="223" width="240" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7EK-sy-qb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="149"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="back" width="111" height="74"/>
+        <image name="back" width="333" height="222"/>
     </resources>
 </document>
