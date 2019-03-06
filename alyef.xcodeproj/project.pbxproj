@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B28228E7CA8C7CCA8AE6DE61 /* Pods_alyef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB119D88D6A5053C29A7BEDA /* Pods_alyef.framework */; };
+		D1C4641C222FA34E00ABEF1A /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4641B222FA34E00ABEF1A /* Splash.swift */; };
+		D1C46420222FA48100ABEF1A /* Model in Resources */ = {isa = PBXBuildFile; fileRef = D1C4641F222FA48100ABEF1A /* Model */; };
+		D1C46422222FA4A100ABEF1A /* ServiceModal in Resources */ = {isa = PBXBuildFile; fileRef = D1C46421222FA4A100ABEF1A /* ServiceModal */; };
 		D1CB961A222D66620046C0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB9619222D66620046C0C9 /* AppDelegate.swift */; };
 		D1CB961C222D66620046C0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB961B222D66620046C0C9 /* ViewController.swift */; };
 		D1CB961F222D66620046C0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CB961D222D66620046C0C9 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		32AB4B44D3CC97E0F754BE42 /* Pods-alyef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alyef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alyef/Pods-alyef.debug.xcconfig"; sourceTree = "<group>"; };
+		D1C4641B222FA34E00ABEF1A /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		D1C4641F222FA48100ABEF1A /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		D1C46421222FA4A100ABEF1A /* ServiceModal */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ServiceModal; sourceTree = "<group>"; };
 		D1CB9616222D66620046C0C9 /* alyef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alyef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CB9619222D66620046C0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CB961B222D66620046C0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 		D1CB960D222D66620046C0C9 = {
 			isa = PBXGroup;
 			children = (
+				D1CB961D222D66620046C0C9 /* Main.storyboard */,
 				D1CB9618222D66620046C0C9 /* alyef */,
 				D1CB9617222D66620046C0C9 /* Products */,
 				3F64D87E2805774D98673FAA /* Pods */,
@@ -82,9 +89,11 @@
 			children = (
 				D1CB9619222D66620046C0C9 /* AppDelegate.swift */,
 				D1CB961B222D66620046C0C9 /* ViewController.swift */,
-				D1CB961D222D66620046C0C9 /* Main.storyboard */,
 				D1CB9623222D66660046C0C9 /* Assets.xcassets */,
+				D1C4641B222FA34E00ABEF1A /* Splash.swift */,
 				D1CB9625222D66660046C0C9 /* LaunchScreen.storyboard */,
+				D1C4641F222FA48100ABEF1A /* Model */,
+				D1C46421222FA4A100ABEF1A /* ServiceModal */,
 				D1CB9628222D66660046C0C9 /* Info.plist */,
 				D1CB9620222D66620046C0C9 /* alyef.xcdatamodeld */,
 			);
@@ -151,8 +160,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C46422222FA4A100ABEF1A /* ServiceModal in Resources */,
 				D1CB9627222D66660046C0C9 /* LaunchScreen.storyboard in Resources */,
 				D1CB9624222D66660046C0C9 /* Assets.xcassets in Resources */,
+				D1C46420222FA48100ABEF1A /* Model in Resources */,
 				D1CB961F222D66620046C0C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +232,7 @@
 			files = (
 				D1CB961C222D66620046C0C9 /* ViewController.swift in Sources */,
 				D1CB9622222D66620046C0C9 /* alyef.xcdatamodeld in Sources */,
+				D1C4641C222FA34E00ABEF1A /* Splash.swift in Sources */,
 				D1CB961A222D66620046C0C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
