@@ -10,6 +10,6 @@ target 'alyef' do
      pod 'AlamofireImage'
      pod 'SwiftyJSON'
      pod 'NVActivityIndicatorView'
-
+     pod 'TransitionButton'
     pod 'Toast-Swift', '~> 4.0.0'
 end

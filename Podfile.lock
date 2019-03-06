@@ -7,6 +7,7 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.5.1)
   - SwiftyJSON (4.2.0)
   - Toast-Swift (4.0.1)
+  - TransitionButton (0.5.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - SwiftyJSON
   - Toast-Swift (~> 4.0.0)
+  - TransitionButton
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - SwiftyJSON
     - Toast-Swift
+    - TransitionButton
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -29,7 +32,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: ec34a7b88c51fab270004a1a1f32116e711010cd
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
+  TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 0500dcaad0a2f778e3ef11f23a5e4e9a1d088e21
+PODFILE CHECKSUM: 51f0bdf6108856a0e3f6113aabf4412cc184e45b
 
 COCOAPODS: 1.5.3
