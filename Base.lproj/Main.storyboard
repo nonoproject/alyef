@@ -149,20 +149,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6jH-9j-2iz" customClass="DesignableButton" customModule="alyef" customModuleProvider="target">
-                                                    <rect key="frame" x="137" y="17" width="100" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                    <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                                    <state key="normal" title="Button" image="fix" backgroundImage="btn1"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="50"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="Advertise_but:" destination="Myp-sm-wGf" eventType="touchUpInside" id="jbN-5P-HmN"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خدمات الصيانة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ojk-ta-PFa">
                                                     <rect key="frame" x="46" y="119" width="280" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -170,6 +156,22 @@
                                                     <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="36p-zy-HE3" customClass="DesignableImageView" customModule="alyef" customModuleProvider="target">
+                                                    <rect key="frame" x="137" y="20" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.35394304989999997" green="0.50432342289999998" blue="0.60050022599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                     </collectionViewCell>
@@ -188,7 +190,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="mW0-Ih-ukB"/>
                     <connections>
-                        <outlet property="adertise_Service" destination="6jH-9j-2iz" id="mlS-NR-Mur"/>
                         <segue destination="YUu-hY-aNh" kind="push" identifier="toServise" id="NaW-Ic-VYO"/>
                     </connections>
                 </viewController>
@@ -1082,15 +1083,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="111" height="74"/>
-        <image name="back0" width="16" height="16"/>
-        <image name="btn1" width="166" height="32"/>
-        <image name="check" width="256" height="256"/>
-        <image name="dek" width="185" height="185"/>
-        <image name="fix" width="170" height="170"/>
-        <image name="icon" width="341" height="341"/>
+        <image name="back" width="333" height="222"/>
+        <image name="back0" width="333" height="222"/>
+        <image name="btn1" width="500" height="98"/>
+        <image name="check" width="768" height="768"/>
+        <image name="dek" width="555" height="555"/>
+        <image name="icon" width="1024" height="1024"/>
         <image name="menu_hide" width="222" height="222"/>
-        <image name="menu_show" width="16" height="16"/>
-        <image name="text" width="280" height="75"/>
+        <image name="menu_show" width="222" height="222"/>
+        <image name="text" width="840" height="225"/>
     </resources>
 </document>
