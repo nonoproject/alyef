@@ -142,7 +142,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1KL-3o-LEI">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ServiceListCell" id="1KL-3o-LEI" customClass="MCollectionViewCell" customModule="alyef" customModuleProvider="target">
                                         <rect key="frame" x="0.5" y="0.0" width="374" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -174,8 +174,16 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="Image" destination="36p-zy-HE3" id="CGd-pN-u7n"/>
+                                            <outlet property="label" destination="Ojk-ta-PFa" id="7kB-Ry-nnP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Myp-sm-wGf" id="Djx-De-lDO"/>
+                                    <outlet property="delegate" destination="Myp-sm-wGf" id="efS-3g-PE4"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C65-P3-OzR">
                                 <rect key="frame" x="320" y="40" width="40" height="40"/>
@@ -190,6 +198,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mW0-Ih-ukB"/>
                     <connections>
+                        <outlet property="myTableView" destination="4NR-6R-nwZ" id="YNC-T8-FDW"/>
                         <segue destination="YUu-hY-aNh" kind="push" identifier="toServise" id="NaW-Ic-VYO"/>
                     </connections>
                 </viewController>
@@ -1083,14 +1092,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="333" height="222"/>
-        <image name="back0" width="333" height="222"/>
-        <image name="btn1" width="500" height="98"/>
-        <image name="check" width="768" height="768"/>
-        <image name="dek" width="555" height="555"/>
-        <image name="icon" width="1024" height="1024"/>
-        <image name="menu_hide" width="222" height="222"/>
-        <image name="menu_show" width="222" height="222"/>
-        <image name="text" width="840" height="225"/>
+        <image name="back" width="111" height="74"/>
+        <image name="back0" width="111" height="74"/>
+        <image name="btn1" width="166" height="32"/>
+        <image name="check" width="256" height="256"/>
+        <image name="dek" width="185" height="185"/>
+        <image name="icon" width="341" height="341"/>
+        <image name="menu_hide" width="74" height="74"/>
+        <image name="menu_show" width="74" height="74"/>
+        <image name="text" width="280" height="75"/>
     </resources>
 </document>
