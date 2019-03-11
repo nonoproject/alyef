@@ -198,7 +198,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mW0-Ih-ukB"/>
                     <connections>
-                        <outlet property="myTableView" destination="4NR-6R-nwZ" id="YNC-T8-FDW"/>
+                        <outlet property="myCollection" destination="4NR-6R-nwZ" id="bgY-C3-ifG"/>
                         <segue destination="YUu-hY-aNh" kind="push" identifier="toServise" id="NaW-Ic-VYO"/>
                     </connections>
                 </viewController>

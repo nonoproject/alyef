@@ -18,7 +18,7 @@
 		D103CA71223146CD00CB603F /* MCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA68223146CC00CB603F /* MCollectionViewCell.swift */; };
 		D103CA72223146CD00CB603F /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA69223146CD00CB603F /* PriceCell.swift */; };
 		D103CA742231481400CB603F /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA732231481400CB603F /* jsonData.swift */; };
-		D103CA7822314AC400CB603F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA7722314AC400CB603F /* ViewController.swift */; };
+		D103CA7A22314DF500CB603F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA7922314DF500CB603F /* ViewController.swift */; };
 		D1C4641C222FA34E00ABEF1A /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4641B222FA34E00ABEF1A /* Splash.swift */; };
 		D1C4642B222FA88400ABEF1A /* Extes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C46426222FA88400ABEF1A /* Extes.swift */; };
 		D1C4642C222FA88400ABEF1A /* SysConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C46427222FA88400ABEF1A /* SysConnection.swift */; };
@@ -49,7 +49,7 @@
 		D103CA68223146CC00CB603F /* MCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCollectionViewCell.swift; sourceTree = "<group>"; };
 		D103CA69223146CD00CB603F /* PriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		D103CA732231481400CB603F /* jsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
-		D103CA7722314AC400CB603F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D103CA7922314DF500CB603F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1C4641B222FA34E00ABEF1A /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		D1C46426222FA88400ABEF1A /* Extes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extes.swift; sourceTree = "<group>"; };
 		D1C46427222FA88400ABEF1A /* SysConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysConnection.swift; sourceTree = "<group>"; };
@@ -145,6 +145,7 @@
 				D103CA62223146CB00CB603F /* ServiseCell.swift */,
 				D103CA65223146CC00CB603F /* tableViewCell.swift */,
 				D1C4643F222FC0B400ABEF1A /* Mintainans_Servise.swift */,
+				D103CA7922314DF500CB603F /* ViewController.swift */,
 			);
 			path = Mintainans_Servise;
 			sourceTree = "<group>";
@@ -173,7 +174,6 @@
 			children = (
 				D1CB9619222D66620046C0C9 /* AppDelegate.swift */,
 				D103CA732231481400CB603F /* jsonData.swift */,
-				D103CA7722314AC400CB603F /* ViewController.swift */,
 				D1CB9623222D66660046C0C9 /* Assets.xcassets */,
 				D103CA5F223142C100CB603F /* HellpeViews */,
 				D1C4643E222FC01200ABEF1A /* Mintainans_Servise */,
@@ -323,9 +323,9 @@
 				D103CA72223146CD00CB603F /* PriceCell.swift in Sources */,
 				D1C46436222FA90E00ABEF1A /* API.swift in Sources */,
 				D103CA742231481400CB603F /* jsonData.swift in Sources */,
-				D103CA7822314AC400CB603F /* ViewController.swift in Sources */,
 				D103CA6A223146CD00CB603F /* ServicePrice.swift in Sources */,
 				D1C4642D222FA88400ABEF1A /* CheckInternet.swift in Sources */,
+				D103CA7A22314DF500CB603F /* ViewController.swift in Sources */,
 				D1C4642C222FA88400ABEF1A /* SysConnection.swift in Sources */,
 				D1C4642B222FA88400ABEF1A /* Extes.swift in Sources */,
 				D1CB9622222D66620046C0C9 /* alyef.xcdatamodeld in Sources */,
