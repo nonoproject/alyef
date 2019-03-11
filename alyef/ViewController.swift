@@ -8,8 +8,13 @@
 
 import UIKit
 import Alamofire
+
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 class ViewController: UIViewController {
+    
     @IBOutlet weak var myTableView: UICollectionView!
+    
     var iteams=Array<jsonData>()
     
     override func viewDidLoad() {
@@ -33,6 +38,8 @@ class ViewController: UIViewController {
                             print("JSON:\( item["name"]as!String)")
                             
                             self.myTableView.reloadData()
+                            
+//                            self.myTableView.reloadData()
                             
                         }
                     }
@@ -83,24 +90,36 @@ class ViewController: UIViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     // get a reference to our storyboard cell
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "medhyafCell", for: indexPath as IndexPath) as! MCollectionViewCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceListCell", for: indexPath as IndexPath) as! MCollectionViewCell
 //    cell.backgroundColor = UIColor.white // make cell more visible in our example project
+        
+        if let imageFromCache = imageCache.object(forKey: "\(iteams[indexPath.row].image)" as AnyObject) as? UIImage {
+            cell.Image?.image = imageFromCache
+        }else {
+            
+            DispatchQueue.main.async {
+                
+                if self.iteams[indexPath.row].image != nil {
+                    if let imageURI = URL(string: ("https://medhyafapp.com/ref/uploads/"+self.iteams[indexPath.row].image!)) {
+                        //print("It's a photo!")
+                        DispatchQueue.global(qos: .background).async {
+                            let data = try? Data(contentsOf: imageURI)
+                            DispatchQueue.main.async {
+                                if data != nil{
+                                    imageCache.setObject(UIImage(data: data!)!, forKey: "\(self.iteams[indexPath.row].image)" as AnyObject)
+                                    
+                                    cell.Image?.image = UIImage(data: data!)
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
     
-    if iteams[indexPath.row].image != nil {
-    if let imageURI = URL(string: ("https://medhyafapp.com/ref/uploads/"+iteams[indexPath.row].image!)) {
-    //print("It's a photo!")
-    DispatchQueue.global(qos: .background).async {
-    let data = try? Data(contentsOf: imageURI)
-    DispatchQueue.main.async {
-    if data != nil{
-    
-    cell.Image?.image = UIImage(data: data!)
-    }
-    
-    }
-    }
-    }
-    }
+   
     cell.label.text=iteams[indexPath.row].label
     return cell
     }

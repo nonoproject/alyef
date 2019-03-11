@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Splash-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Splash" customModule="alyef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cch-Be-Juf"/>
                     <connections>
-                        <segue destination="PFv-ad-2Wz" kind="push" id="6MN-tg-v8h"/>
+                        <segue destination="PFv-ad-2Wz" kind="push" identifier="toAdvetise" id="6MN-tg-v8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -49,10 +49,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dek" id="Ef2-Eb-1Pf">
-                                <rect key="frame" x="0.0" y="229" width="375" height="438"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إعلان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XT0-BO-VfT">
                                 <rect key="frame" x="91" y="77" width="193" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -120,6 +116,92 @@
             </objects>
             <point key="canvasLocation" x="1700" y="148.87556221889056"/>
         </scene>
+        <!--pricing-->
+        <scene sceneID="YTh-I9-WEe">
+            <objects>
+                <viewController id="RxL-rR-B8e" userLabel="pricing" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BFa-N3-LZo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="867"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dek" id="dWp-uo-eFf">
+                                <rect key="frame" x="0.0" y="745" width="375" height="122"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="evP-Z7-AiS">
+                                <rect key="frame" x="0.0" y="73" width="375" height="794"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N0g-rH-Xno">
+                                        <rect key="frame" x="8" y="166" width="359" height="494"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="1at-Jv-wXo">
+                                                <rect key="frame" x="0.0" y="28" width="359" height="50"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1at-Jv-wXo" id="bVy-J1-PFN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="49.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم الخدمة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Rul-It-zvh">
+                                                            <rect key="frame" x="117" y="10" width="227" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                                            <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289305999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 ريال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="3Ie-2y-O0P">
+                                                            <rect key="frame" x="15" y="10" width="94" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                                            <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289305999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" id="ndh-DQ-IpP">
+                                        <rect key="frame" x="8" y="8" width="359" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="30h-SU-b6w">
+                                <rect key="frame" x="330" y="30" width="40" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mKr-1V-EnJ">
+                                <rect key="frame" x="122" y="747" width="154" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                <state key="normal" title="موافق" backgroundImage="btn1">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="toMenuAction:" destination="PFv-ad-2Wz" eventType="touchUpInside" id="eZv-NC-dyH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قائمة الاسعار و العروض التقديرية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eel-RG-N3U">
+                                <rect key="frame" x="46" y="29" width="282" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="THN-U4-Vj5"/>
+                    <size key="freeformSize" width="375" height="867"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vqr-SL-6es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3858" y="149"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="4OM-9p-dnl">
             <objects>
@@ -129,12 +211,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dek" id="iLu-7D-CCq">
-                                <rect key="frame" x="0.0" y="337" width="375" height="330"/>
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4NR-6R-nwZ">
                                 <rect key="frame" x="0.0" y="68" width="375" height="531"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VQ9-Gm-F6l">
                                     <size key="itemSize" width="374" height="167"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -156,7 +239,7 @@
                                                     <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="36p-zy-HE3" customClass="DesignableImageView" customModule="alyef" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" id="36p-zy-HE3" customClass="DesignableImageView" customModule="alyef" customModuleProvider="target">
                                                     <rect key="frame" x="137" y="20" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,6 +257,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="Image" destination="36p-zy-HE3" id="CGd-pN-u7n"/>
                                             <outlet property="label" destination="Ojk-ta-PFa" id="7kB-Ry-nnP"/>
@@ -198,7 +282,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mW0-Ih-ukB"/>
                     <connections>
-                        <outlet property="myTableView" destination="4NR-6R-nwZ" id="YNC-T8-FDW"/>
+                        <outlet property="myTableView" destination="4NR-6R-nwZ" id="0lR-bx-FjW"/>
                         <segue destination="YUu-hY-aNh" kind="push" identifier="toServise" id="NaW-Ic-VYO"/>
                     </connections>
                 </viewController>
@@ -241,17 +325,8 @@
                                         <state key="normal" title="عرض الاسعار التقديرية">
                                             <color key="titleColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zqt-UV-n42" customClass="TransitionButton" customModule="TransitionButton">
-                                        <rect key="frame" x="110" y="411" width="154" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
-                                        <state key="normal" title="إستمر" backgroundImage="btn1">
-                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        </state>
                                         <connections>
-                                            <action selector="Contnue:" destination="YUu-hY-aNh" eventType="touchUpInside" id="mmt-dO-rJ1"/>
-                                            <action selector="toMenuAction:" destination="PFv-ad-2Wz" eventType="touchUpInside" id="619-UE-Ned"/>
+                                            <segue destination="RxL-rR-B8e" kind="push" id="zLQ-eA-PNl"/>
                                         </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="p5w-zg-oXj">
@@ -265,7 +340,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U5Y-iA-eXf">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ServiceListCell" id="U5Y-iA-eXf" customClass="ServiseCell" customModule="alyef" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -283,7 +358,6 @@
                                                             <rect key="frame" x="293" y="12" width="30" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                                             <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                                            <state key="normal" image="check"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                     <real key="value" value="2"/>
@@ -298,20 +372,36 @@
                                                         </button>
                                                     </subviews>
                                                 </view>
+                                                <connections>
+                                                    <outlet property="chang_status" destination="k5i-Ba-R2D" id="7Tl-NI-ahN"/>
+                                                    <outlet property="status" destination="UKr-fB-n1C" id="Mzb-p6-T5S"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zqt-UV-n42" customClass="TransitionButton" customModule="TransitionButton">
+                                        <rect key="frame" x="112" y="409" width="150" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                        <state key="normal" title="إستمر" backgroundImage="btn1">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Contnue:" destination="YUu-hY-aNh" eventType="touchUpInside" id="KWA-tT-D6c"/>
+                                            <action selector="toMenuAction:" destination="PFv-ad-2Wz" eventType="touchUpInside" id="619-UE-Ned"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="YUu-hY-aNh" id="ath-7Q-PA8"/>
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hTY-ZK-jN4">
-                                <rect key="frame" x="330" y="30" width="40" height="35"/>
+                                <rect key="frame" x="330" y="30" width="40" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="nd2-Sm-fxH"/>
+                                    <action selector="goBack:" destination="YUu-hY-aNh" eventType="touchUpInside" id="wab-VN-Cid"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خدمات الصيانة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3S5-1z-Dcl">
@@ -328,12 +418,67 @@
                     <size key="freeformSize" width="375" height="767"/>
                     <connections>
                         <outlet property="goBut" destination="Zqt-UV-n42" id="KRM-pc-Zmj"/>
+                        <outlet property="myCollectionView" destination="p5w-zg-oXj" id="rsG-S0-FlC"/>
+                        <outlet property="myScroll" destination="D5e-gK-xD2" id="c7s-Ku-RC2"/>
                         <outlet property="note" destination="j6Q-pG-5fP" id="fNZ-IL-KiK"/>
+                        <outlet property="showPricing" destination="iBF-Hw-rJm" id="9TT-rs-hxX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeF-0n-r0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3133.5999999999999" y="148.87556221889056"/>
+            <point key="canvasLocation" x="3134" y="149"/>
+        </scene>
+        <!--Map Controller-->
+        <scene sceneID="d0i-no-3d4">
+            <objects>
+                <viewController storyboardIdentifier="MapStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BEM-PU-255" customClass="mapController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a8W-HH-GjZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DhR-s2-UDH">
+                                <rect key="frame" x="327" y="30" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="YUu-hY-aNh" eventType="touchUpInside" id="fuJ-oM-wsh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حدد موقعك علي الخريطة " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bR4-E7-sEW">
+                                <rect key="frame" x="46" y="30" width="282" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                <color key="textColor" red="0.2065480053" green="0.50007796289999995" blue="0.59289306399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dek" id="Ef2-Eb-1Pf">
+                                <rect key="frame" x="0.0" y="339" width="375" height="330"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="OEO-cb-UzS">
+                                <rect key="frame" x="0.0" y="67" width="375" height="389"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35394304989999997" green="0.50432342289999998" blue="0.60050022599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FlV-y7-6bF" customClass="TransitionButton" customModule="TransitionButton">
+                                <rect key="frame" x="112" y="484" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JannaLT-Regular" family="Janna LT" pointSize="20"/>
+                                <state key="normal" title="موافق" backgroundImage="btn1">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Contnue:" destination="YUu-hY-aNh" eventType="touchUpInside" id="duZ-ep-4rm"/>
+                                    <action selector="toMenuAction:" destination="PFv-ad-2Wz" eventType="touchUpInside" id="HH3-KE-lIM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFf-rc-F8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4572" y="149"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XOE-pg-DC1">
@@ -436,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ax5-bE-qe0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3905" y="149"/>
+            <point key="canvasLocation" x="5241" y="149"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ooJ-Iu-zHz">
@@ -492,7 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RbS-an-Q7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4681" y="149"/>
+            <point key="canvasLocation" x="5959" y="149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kjk-bH-kst">
@@ -612,12 +757,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t4K-mM-S94">
-                                <rect key="frame" x="320" y="40" width="40" height="35"/>
+                                <rect key="frame" x="320" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="ETL-kg-u0a"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قائمة الطلبات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pfO-Ey-h9O">
                                 <rect key="frame" x="74" y="40" width="227" height="29"/>
@@ -732,12 +874,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DbQ-Ai-ai4">
-                                <rect key="frame" x="320" y="40" width="40" height="35"/>
+                                <rect key="frame" x="320" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="iXQ-kD-ldz"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" id="MQa-qZ-T9b" customClass="SideBorders" customModule="alyef" customModuleProvider="target">
                                 <rect key="frame" x="16" y="94" width="340" height="128"/>
@@ -896,12 +1035,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4dK-YQ-hjR">
-                                <rect key="frame" x="320" y="40" width="40" height="35"/>
+                                <rect key="frame" x="320" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="9et-3w-1Ys"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="MzF-O0-hkh">
                                 <rect key="frame" x="16" y="84" width="344" height="503"/>
@@ -940,12 +1076,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qul-A8-U56">
-                                <rect key="frame" x="320" y="40" width="40" height="35"/>
+                                <rect key="frame" x="320" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="tFk-88-ku6"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" id="9fe-gT-6Pv">
                                 <rect key="frame" x="16" y="84" width="344" height="503"/>
@@ -984,12 +1117,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BNG-Ug-QLs">
-                                <rect key="frame" x="320" y="40" width="40" height="35"/>
+                                <rect key="frame" x="320" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="Cqc-ss-jBs"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dek" id="qhu-jz-2DH">
                                 <rect key="frame" x="0.0" y="367" width="375" height="300"/>
@@ -1055,12 +1185,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Kfd-hA-Xkf">
-                                <rect key="frame" x="320" y="40" width="40" height="35"/>
+                                <rect key="frame" x="320" y="40" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="Advertise_but:" destination="YUu-hY-aNh" eventType="touchUpInside" id="7rs-iF-Ems"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" id="nWD-RQ-up0">
                                 <rect key="frame" x="16" y="83" width="343" height="503"/>
@@ -1092,14 +1219,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="111" height="74"/>
-        <image name="back0" width="111" height="74"/>
-        <image name="btn1" width="166" height="32"/>
-        <image name="check" width="256" height="256"/>
-        <image name="dek" width="185" height="185"/>
-        <image name="icon" width="341" height="341"/>
-        <image name="menu_hide" width="74" height="74"/>
-        <image name="menu_show" width="74" height="74"/>
-        <image name="text" width="280" height="75"/>
+        <image name="back" width="333" height="222"/>
+        <image name="back0" width="333" height="222"/>
+        <image name="btn1" width="500" height="98"/>
+        <image name="dek" width="555" height="555"/>
+        <image name="icon" width="1024" height="1024"/>
+        <image name="menu_hide" width="222" height="222"/>
+        <image name="menu_show" width="222" height="222"/>
+        <image name="text" width="840" height="225"/>
     </resources>
 </document>

@@ -14,7 +14,6 @@
 		D103CA6C223146CD00CB603F /* ServiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA63223146CB00CB603F /* ServiceListCell.swift */; };
 		D103CA6D223146CD00CB603F /* ReyfService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA64223146CC00CB603F /* ReyfService.swift */; };
 		D103CA6E223146CD00CB603F /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA65223146CC00CB603F /* tableViewCell.swift */; };
-		D103CA6F223146CD00CB603F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA66223146CC00CB603F /* Service.swift */; };
 		D103CA71223146CD00CB603F /* MCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA68223146CC00CB603F /* MCollectionViewCell.swift */; };
 		D103CA72223146CD00CB603F /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA69223146CD00CB603F /* PriceCell.swift */; };
 		D103CA742231481400CB603F /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA732231481400CB603F /* jsonData.swift */; };
@@ -45,7 +44,6 @@
 		D103CA63223146CB00CB603F /* ServiceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
 		D103CA64223146CC00CB603F /* ReyfService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReyfService.swift; sourceTree = "<group>"; };
 		D103CA65223146CC00CB603F /* tableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
-		D103CA66223146CC00CB603F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../../../../alyef_last/alyef/Mintainans_Servise/Service.swift; sourceTree = "<group>"; };
 		D103CA68223146CC00CB603F /* MCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCollectionViewCell.swift; sourceTree = "<group>"; };
 		D103CA69223146CD00CB603F /* PriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		D103CA732231481400CB603F /* jsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				D103CA68223146CC00CB603F /* MCollectionViewCell.swift */,
 				D103CA69223146CD00CB603F /* PriceCell.swift */,
 				D103CA64223146CC00CB603F /* ReyfService.swift */,
-				D103CA66223146CC00CB603F /* Service.swift */,
 				D103CA63223146CB00CB603F /* ServiceListCell.swift */,
 				D103CA61223146CB00CB603F /* ServicePrice.swift */,
 				D103CA62223146CB00CB603F /* ServiseCell.swift */,
@@ -332,7 +329,6 @@
 				D103CA71223146CD00CB603F /* MCollectionViewCell.swift in Sources */,
 				D1C4643D222FBEC500ABEF1A /* GlobalVariables.swift in Sources */,
 				D1C4641C222FA34E00ABEF1A /* Splash.swift in Sources */,
-				D103CA6F223146CD00CB603F /* Service.swift in Sources */,
 				D1C4642F222FA88400ABEF1A /* SysJsonData.swift in Sources */,
 				D1C4642E222FA88400ABEF1A /* RemoveKeyboard.swift in Sources */,
 				D1C46440222FC0B400ABEF1A /* Mintainans_Servise.swift in Sources */,
