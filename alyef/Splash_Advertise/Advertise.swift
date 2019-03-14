@@ -7,69 +7,63 @@
 //
 
 import UIKit
-
 import Alamofire
+import SwiftyJSON
+
 class Advertise: UIViewController {
 
     @IBOutlet weak var advertise_message: UILabel!
     @IBOutlet weak var AdvertiseImage: UIImageView!
+    
+    var json:[JSON]!
+    
+    let Obj = Glubal()
+    let ObjApi = API()
+    
+    var loader:Loader! // = Loader.init(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-getAdvertise()
-        // Do any additional setup after loading the view.
+        
+        loader = Loader.init(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height))
+        self.view.addSubview(loader)
+        
+        getAdvertise()
     }
+    
     func getAdvertise(){
-     
-        Alamofire.request("http://medhyafapp.com/ref/app/show/ads.php")
+        
+        loader.loaderStart()
+        
+        DispatchQueue.main.async {
             
-            .responseJSON { response in
-                 print("JSON:\(response.result.value)")
-                switch(response.result) {
-                case .success(_):
-                    if let data = response.result.value as? [[String : Any]]{
-                        for item in data {
-                            //self.iteams.append(ImageData(image: item["image_url"]as!String,nameLable:item["tag"] as! String,dateLable: item["1"] as! String,butId:item["id"] as!String))
-                            //  print("JSON:\()")
-                            self.advertise_message.text = item["message"] as! String
-                            if item["image"] != nil {
-                                var image_url:String=item["image"] as! String
-                                // connection().getUrl(word: "getAddvertiseImageLink")+item["image"] as String
-                                if let imageURI = URL(string: ("http://medhyafapp.com/ref/uploads/" + image_url)) {
-                                    //print("It's a photo!")
-                                    DispatchQueue.global(qos: .background).async {
-                                        let data = try? Data(contentsOf: imageURI)
-                                        DispatchQueue.main.async {
-                                            
-                                            self.AdvertiseImage.image = UIImage(data: data!)
-                                        
-                                            self.getPhone()
-                                        }
-                                    }
-                                }
-                            }
-                            //self.MyView.reloadData()
-                        }
-                    }
+            let url = "http://medhyafapp.com/ref/app/show/ads.php"
+            self.ObjApi.getAll(endUrl: url, onCompletion: { (json) in
+                
+                self.loader.loaderStop()
+                self.loader.removeFromSuperview()
+                
+                let imagesJson = json! as? [JSON]
+                
+                for index in 0..<imagesJson!.count {
+                    let url = "http://medhyafapp.com/ref/uploads/\(imagesJson![index]["image"])"
                     
-                case .failure(_):
+                    self.advertise_message.text = "\(imagesJson![index]["message"])"
                     
-                    print("Error message:\(response.result.error)")
-                    break
-                    
+                    self.ObjApi.dwonloadImage(endUrl: url, onCompletion: { (image) in
+                        
+                        self.AdvertiseImage.image = image!
+                        
+                    }, onError: { (err) in
+                        print(err!)
+                    })
                 }
-            }
-            .responseString { response in
-                print("String:\(response.result.value)")
-                switch(response.result) {
-                case .success(_):
-                    if let data = response.result.value{
-                        print(data)
-                    }
-                    
-                case .failure(_):
-                    print("Error message:\(response.result.error)")
-                    break
-                }
+            }, onError: { (err) in
+                self.loader.loaderStop()
+                self.loader.removeFromSuperview()
+                print(err!)
+            })
         }
         
     }
@@ -79,7 +73,6 @@ getAdvertise()
         Alamofire.request(connection().getUrl(word: "getPhone"))
             
             .responseJSON { response in
-                // print("JSON:\(response.result.value)")
                 switch(response.result) {
                 case .success(_):
                     if let data = response.result.value as? [[String : Any]]{
@@ -87,34 +80,20 @@ getAdvertise()
                         for item in data {
                             GlobalVariables.sharedManager.phoneNumber = item["phone"] as! String
                         }
-//                        self.logo.isHidden = true
-//                        self.AddvertiseDialog.isHidden=false
                     }
                     
                 case .failure(_):
                     
-                    print("Error message:\(response.result.error)")
                     break
                     
                 }
             }
-            .responseString { response in
-                print("String:\(response.result.value)")
-                switch(response.result) {
-                case .success(_):
-                    if let data = response.result.value{
-                        print(data)
-                    }
-                    
-                case .failure(_):
-                    print("Error message:\(response.result.error)")
-                    break
-                }
-        }
         
     }
     @IBAction func toMenuAction(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        
+        print("yes")
         
         self.performSegue(withIdentifier: "toMenu", sender: nil)
         

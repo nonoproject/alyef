@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92C47D742236AA9D00ED7DD8 /* Last_view_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C47D712236AA9D00ED7DD8 /* Last_view_controller.swift */; };
+		92C47D752236AA9D00ED7DD8 /* UserDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C47D722236AA9D00ED7DD8 /* UserDataController.swift */; };
+		92C47D762236AA9D00ED7DD8 /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C47D732236AA9D00ED7DD8 /* mapController.swift */; };
+		92C47D782238DFB400ED7DD8 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C47D772238DFB400ED7DD8 /* Loader.swift */; };
 		B28228E7CA8C7CCA8AE6DE61 /* Pods_alyef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB119D88D6A5053C29A7BEDA /* Pods_alyef.framework */; };
-		D103CA60223142C100CB603F /* HellpeViews in Resources */ = {isa = PBXBuildFile; fileRef = D103CA5F223142C100CB603F /* HellpeViews */; };
 		D103CA6A223146CD00CB603F /* ServicePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA61223146CB00CB603F /* ServicePrice.swift */; };
 		D103CA6B223146CD00CB603F /* ServiseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA62223146CB00CB603F /* ServiseCell.swift */; };
 		D103CA6C223146CD00CB603F /* ServiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103CA63223146CB00CB603F /* ServiceListCell.swift */; };
@@ -38,7 +41,10 @@
 
 /* Begin PBXFileReference section */
 		32AB4B44D3CC97E0F754BE42 /* Pods-alyef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alyef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alyef/Pods-alyef.debug.xcconfig"; sourceTree = "<group>"; };
-		D103CA5F223142C100CB603F /* HellpeViews */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HellpeViews; sourceTree = "<group>"; };
+		92C47D712236AA9D00ED7DD8 /* Last_view_controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Last_view_controller.swift; sourceTree = "<group>"; };
+		92C47D722236AA9D00ED7DD8 /* UserDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataController.swift; sourceTree = "<group>"; };
+		92C47D732236AA9D00ED7DD8 /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
+		92C47D772238DFB400ED7DD8 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		D103CA61223146CB00CB603F /* ServicePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePrice.swift; sourceTree = "<group>"; };
 		D103CA62223146CB00CB603F /* ServiseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiseCell.swift; sourceTree = "<group>"; };
 		D103CA63223146CB00CB603F /* ServiceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
@@ -99,6 +105,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		92C47D702236AA8F00ED7DD8 /* HellpeViews */ = {
+			isa = PBXGroup;
+			children = (
+				92C47D712236AA9D00ED7DD8 /* Last_view_controller.swift */,
+				92C47D732236AA9D00ED7DD8 /* mapController.swift */,
+				92C47D722236AA9D00ED7DD8 /* UserDataController.swift */,
+			);
+			name = HellpeViews;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		D1C46425222FA87000ABEF1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C4641B222FA34E00ABEF1A /* Splash.swift */,
+				92C47D772238DFB400ED7DD8 /* Loader.swift */,
 				D1C4643A222FB5AA00ABEF1A /* Advertise.swift */,
 			);
 			path = Splash_Advertise;
@@ -172,7 +190,7 @@
 				D103CA732231481400CB603F /* jsonData.swift */,
 				D103CA7722314AC400CB603F /* ViewController.swift */,
 				D1CB9623222D66660046C0C9 /* Assets.xcassets */,
-				D103CA5F223142C100CB603F /* HellpeViews */,
+				92C47D702236AA8F00ED7DD8 /* HellpeViews */,
 				D1C4643E222FC01200ABEF1A /* Mintainans_Servise */,
 				D1C46439222FB57100ABEF1A /* Splash_Advertise */,
 				D1C46430222FA8A800ABEF1A /* Fonts */,
@@ -247,7 +265,6 @@
 				D1CB9627222D66660046C0C9 /* LaunchScreen.storyboard in Resources */,
 				D1C46432222FA8BC00ABEF1A /* jana.ttf in Resources */,
 				D1CB9624222D66660046C0C9 /* Assets.xcassets in Resources */,
-				D103CA60223142C100CB603F /* HellpeViews in Resources */,
 				D1CB961F222D66620046C0C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +339,9 @@
 				D103CA742231481400CB603F /* jsonData.swift in Sources */,
 				D103CA7822314AC400CB603F /* ViewController.swift in Sources */,
 				D103CA6A223146CD00CB603F /* ServicePrice.swift in Sources */,
+				92C47D752236AA9D00ED7DD8 /* UserDataController.swift in Sources */,
 				D1C4642D222FA88400ABEF1A /* CheckInternet.swift in Sources */,
+				92C47D762236AA9D00ED7DD8 /* mapController.swift in Sources */,
 				D1C4642C222FA88400ABEF1A /* SysConnection.swift in Sources */,
 				D1C4642B222FA88400ABEF1A /* Extes.swift in Sources */,
 				D1CB9622222D66620046C0C9 /* alyef.xcdatamodeld in Sources */,
@@ -333,7 +352,9 @@
 				D1C4642E222FA88400ABEF1A /* RemoveKeyboard.swift in Sources */,
 				D1C46440222FC0B400ABEF1A /* Mintainans_Servise.swift in Sources */,
 				D1CB961A222D66620046C0C9 /* AppDelegate.swift in Sources */,
+				92C47D782238DFB400ED7DD8 /* Loader.swift in Sources */,
 				D103CA6C223146CD00CB603F /* ServiceListCell.swift in Sources */,
+				92C47D742236AA9D00ED7DD8 /* Last_view_controller.swift in Sources */,
 				D103CA6B223146CD00CB603F /* ServiseCell.swift in Sources */,
 				D1C4643B222FB5AA00ABEF1A /* Advertise.swift in Sources */,
 				D103CA6E223146CD00CB603F /* tableViewCell.swift in Sources */,
@@ -483,15 +504,17 @@
 			baseConfigurationReference = 32AB4B44D3CC97E0F754BE42 /* Pods-alyef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5356BACHNF;
+				DEVELOPMENT_TEAM = PP486X33A2;
 				INFOPLIST_FILE = alyef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fahad.alryf.com.alyef;
+				PRODUCT_BUNDLE_IDENTIFIER = PitaStudio.alref;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,15 +525,17 @@
 			baseConfigurationReference = FCC77E54E92267F901287742 /* Pods-alyef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5356BACHNF;
+				DEVELOPMENT_TEAM = PP486X33A2;
 				INFOPLIST_FILE = alyef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fahad.alryf.com.alyef;
+				PRODUCT_BUNDLE_IDENTIFIER = PitaStudio.alref;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

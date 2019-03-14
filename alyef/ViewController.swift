@@ -7,11 +7,17 @@
 //
 
 import UIKit
-import Alamofire
+import SwiftyJSON
 
 let imageCache = NSCache<AnyObject, AnyObject>()
 
 class ViewController: UIViewController {
+    
+    var loader:Loader!
+    var json:[JSON] = []
+    
+    let Obj = Glubal()
+    let ObjApi = API()
     
     @IBOutlet weak var myTableView: UICollectionView!
     
@@ -20,129 +26,96 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loader = Loader.init(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height))
+        self.view.addSubview(loader)
+        
         getData()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    
     func getData(){
-        Alamofire.request("http://medhyafapp.com/ref/app/show/categories.php?x=y")
-            
-            .responseJSON { response in
-                //print("JSON:\(response.result.value)")
-                switch(response.result) {
-                case .success(_):
-                    if let data = response.result.value as? [[String : Any]]{
-                        for item in data {
-                            // self.nameArray.append(naitem["item_id"] as! String)
-                            self.iteams.append(jsonData(id: item["id"] as! String  ,image: item["image"]as!String, label: item["name"]as!String))
-                            //self.fullTableView()
-                            print("JSON:\( item["name"]as!String)")
-                            
-                            self.myTableView.reloadData()
-                            
-//                            self.myTableView.reloadData()
-                            
-                        }
-                    }
-                    
-                case .failure(_):
-                    
-                    print("Error message:\(response.result.error)")
-                    break
-                    
-                }
-            }
-            .responseString { response in
-                //print("String:\(response.result.value)")
-                switch(response.result) {
-                case .success(_):
-                    if let data = response.result.value{
-                        // print(data)
-                    }
-                    
-                case .failure(_):
-                    //print("Error message:\(response.result.error)")
-                    break
-                }
-        }
         
+        loader.loaderStart()
+        
+        let url = "http://medhyafapp.com/ref/app/show/categories.php?x=y"
+        self.ObjApi.getAll(endUrl: url, onCompletion: { (data) in
+            
+            self.loader.loaderStop()
+            self.loader.removeFromSuperview()
+            
+            let json = data! as! [JSON]
+            self.json = json
+            self.myTableView.reloadData()
+            
+        }) { (error) in
+            
+            self.loader.loaderStop()
+            self.loader.removeFromSuperview()
+            
+            self.getData()
+            
+        }
+       
     }
 
 }
  extension  ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("awad say \(iteams.count)")
-        return iteams.count
+        return json.count
     
     }
   
-    func sendMessage(){
-    var url:String = "http://www.hisms.ws/api.php?"
-    + "send_sms"
-    + "&username=xxx966537811200"
-    + "&password=xxxas334as334"
-    + "&sender=" + "xxxihjeez"
-    + "&numbers=" + "phone"
-    + "&message=" + "URLEncoder.encode(s_msg)"
-    + "&date=" + "";
-    }
+//    func sendMessage(){
+//    var url:String = "http://www.hisms.ws/api.php?"
+//    + "send_sms"
+//    + "&username=xxx966537811200"
+//    + "&password=xxxas334as334"
+//    + "&sender=" + "xxxihjeez"
+//    + "&numbers=" + "phone"
+//    + "&message=" + "URLEncoder.encode(s_msg)"
+//    + "&date=" + "";
+//    }
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-    // get a reference to our storyboard cell
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceListCell", for: indexPath as IndexPath) as! MCollectionViewCell
-//    cell.backgroundColor = UIColor.white // make cell more visible in our example project
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceListCell", for: indexPath as IndexPath) as! MCollectionViewCell
         
-        if let imageFromCache = imageCache.object(forKey: "\(iteams[indexPath.row].image)" as AnyObject) as? UIImage {
-            cell.Image?.image = imageFromCache
-        }else {
-            
-            DispatchQueue.main.async {
+        let object = self.json[indexPath.row]
+        
+        if object != [] {
+            if let imageFromCache = imageCache.object(forKey: "\(object["image"])" as AnyObject) as? UIImage {
+                cell.Image?.image = imageFromCache
+            }else {
                 
-                if self.iteams[indexPath.row].image != nil {
-                    if let imageURI = URL(string: ("https://medhyafapp.com/ref/uploads/"+self.iteams[indexPath.row].image!)) {
-                        //print("It's a photo!")
-                        DispatchQueue.global(qos: .background).async {
-                            let data = try? Data(contentsOf: imageURI)
-                            DispatchQueue.main.async {
-                                if data != nil{
-                                    imageCache.setObject(UIImage(data: data!)!, forKey: "\(self.iteams[indexPath.row].image)" as AnyObject)
-                                    
-                                    cell.Image?.image = UIImage(data: data!)
-                                }
-                                
-                            }
-                        }
-                    }
-                }
-                
+                cell.Image?.image = UIImage(named: "\(object["image"])")
+                imageCache.setObject(UIImage(named: "\(object["image"])")!, forKey: "\(object["image"])" as AnyObject)
             }
+        
+            cell.label.text = "\(object["name"])"
         }
-    
-   
-    cell.label.text=iteams[indexPath.row].label
-    return cell
+        return cell
     }
     
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    // handle tap events
-    //print("You selected cell #\(indexPath.item)!")
-    GlobalVariables.sharedManager.productId=iteams[indexPath.row].id!;
-    self.performSegue(withIdentifier: "toServise", sender: nil)
+        GlobalVariables.sharedManager.productId = "\(json[indexPath.row]["id"])"
+        self.performSegue(withIdentifier: "toServise", sender: nil)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //  dismiss(animated: true, completion: nil)
-    if segue.identifier == "toServise" {
-    if let viewController = segue.destination as? ReyfService {
-     
-    viewController.productId = GlobalVariables.sharedManager.productId as! String
     
-     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toServise" {
+            if let viewController = segue.destination as? ReyfService {
+                viewController.productId = GlobalVariables.sharedManager.productId
+            
+             }
+        }
     }
-    }
-    }
+}
    
   
     

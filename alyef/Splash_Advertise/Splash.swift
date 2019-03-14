@@ -7,6 +7,7 @@
 //
 import Foundation
 import UIKit
+
 extension UIView {
     func dropShadow(scale: Bool = true) {
         layer.masksToBounds = false
@@ -22,15 +23,28 @@ extension UIView {
 }
 class Splash: UIViewController {
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            sleep(1)
-            
-            
-            self.performSegue(withIdentifier: "toAdvetise", sender: nil)
-            //deleteAllRecords()
+    @IBOutlet weak var reLogin: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-            // Do any additional setup after loading the view.
+        reLogin.isHidden = true
+        sleep(1)
+        go()
+        
+    }
+    
+    func go() {
+        if CheckInternet.Connection() {
+            self.performSegue(withIdentifier: "toAdvetise", sender: nil)
+        }else {
+            self.reLogin.isHidden = false
         }
-   
+    }
+    
+    
+    @IBAction func reDo(_ sender: Any) {
+        go()
+    }
+    
 }
